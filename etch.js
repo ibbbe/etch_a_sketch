@@ -19,6 +19,10 @@ function createGrid(numOfSquares) {
 
 function clearGrid() {
     const numOfSquares = parseInt(prompt("Please input the number:"));
+    if (numOfSquares > 100) {
+        alert('Please input the number between 1 and 100.')
+        clearGrid();
+    }
     while (div.hasChildNodes()) {
         div.removeChild(div.firstChild);
     }
