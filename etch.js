@@ -3,7 +3,6 @@ const clear = document.querySelector('#btn');
 
 clear.addEventListener('click', clearGrid);
 
-
 function createGrid(numOfSquares) {
     for (let i = 0; i < numOfSquares * numOfSquares; i++) {
         const square = document.createElement('div');
@@ -12,7 +11,9 @@ function createGrid(numOfSquares) {
         container.appendChild(square);
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
-        square.addEventListener('mouseover', () => { square.style.backgroundColor = "red"; });
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = "red";
+        });
     }
 }
 
